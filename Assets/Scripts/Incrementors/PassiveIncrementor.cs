@@ -14,7 +14,7 @@ public class PassiveIncrementor : MonoBehaviour
     public void Init(int rate)
     {
         Rate = rate;
-        InvokeRepeating(nameof(Increment), 1f, 0f);
+        InvokeRepeating(nameof(Increment), 0f, 1f);
     }
 
     public void Increment()
