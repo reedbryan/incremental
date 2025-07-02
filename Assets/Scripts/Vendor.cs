@@ -4,6 +4,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Button))]
 public class Vendor : MonoBehaviour
 {
+    [SerializeField] private int cost;
+    
     [SerializeField] private int rate;
     
     [SerializeField] private GameObject _passiveIncrementorPrefab;
@@ -25,7 +27,12 @@ public class Vendor : MonoBehaviour
 
     public void OnClick()
     {
-        CreatePassiveIncrementor(rate);
+        if (CurrencyManager.Instance.cash >= cost){
+            CreatePassiveIncrementor(rate);
+        }
+        else {
+            // TODO: ADD NEGATIVE PLAYER FEEDBACK
+        }
     }
 
     void CreatePassiveIncrementor(int rate)

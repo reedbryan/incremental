@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079759d74131cab4fa6ee91fb6edfd8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost: 20
   rate: 3
   _passiveIncrementorPrefab: {fileID: 8258660297507861059, guid: b0b2e327b8541f542970e4eaee70f72e, type: 3}
 --- !u!114 &383641190
