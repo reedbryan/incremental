@@ -7,7 +7,7 @@ public class CurrencyManager : MonoBehaviour
     // nsures that there is only one instance of CurrencyManager accessible globally via CurrencyManager.Instance
     public static CurrencyManager Instance;
 
-    public BigInteger cookies = BigInteger.Zero;
+    public int cash = 0;
 
     void Awake()
     {
@@ -20,20 +20,20 @@ public class CurrencyManager : MonoBehaviour
         }
     }
 
-    public void AddCookies(BigInteger amount)
+    public void AddCash(int amount)
     {
-        cookies += amount;
+        cash += amount;
     }
 
     public void SaveData()
     {
-        PlayerPrefs.SetString("cookies", cookies.ToString());
+        PlayerPrefs.SetString("cash", cash.ToString());
         PlayerPrefs.Save();
     }
 
     public void LoadData()
     {
-        string saved = PlayerPrefs.GetString("cookies", "0");
-        cookies = BigInteger.Parse(saved);
+        string saved = PlayerPrefs.GetString("cash", "0");
+        cash = int.Parse(saved);
     }
 }
