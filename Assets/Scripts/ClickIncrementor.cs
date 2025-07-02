@@ -40,6 +40,6 @@ public class ClickIncrementor : MonoBehaviour
     public void OnClick()
     {
         // Your button click logic here
-       CurrencyManager.Instance.AddCash(_rate);
+       CurrencyManager.Instance.AddCash(Rate);
     }
 }
