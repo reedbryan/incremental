@@ -8,6 +8,7 @@ public class CurrencyManager : MonoBehaviour
     public static CurrencyManager Instance;
 
     public int cash = 0;
+    public DisplayCounter cashDisplay;
 
     void Awake()
     {
@@ -23,6 +24,7 @@ public class CurrencyManager : MonoBehaviour
     public void AddCash(int amount)
     {
         cash += amount;
+        cashDisplay.UpdateDisplay(cash);
     }
 
     public void SaveData()
