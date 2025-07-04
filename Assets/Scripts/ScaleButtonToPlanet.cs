@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 
 [RequireComponent(typeof(RectTransform), typeof(Button))]
-public class ScalePlanetUI : MonoBehaviour
+public class ScaleButtonToPlanet : MonoBehaviour
 {
     public PlanetID planetID;
 
